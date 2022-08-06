@@ -1,0 +1,17 @@
+// First Method With Property Declaration
+.class {
+  font: {
+    weight: bold;
+    size: 20px;
+  }
+}
+
+// Second Method With Placeholder
+%font {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.class {
+  @extend %font;
+}

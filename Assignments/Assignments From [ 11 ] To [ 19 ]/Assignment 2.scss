@@ -1,0 +1,8 @@
+$dimention: 6.25%;
+
+@for $i from 1 through 16 {
+  .col-#{$i} {
+    width: $dimention;
+  }
+  $dimention: $dimention + 6.25%;
+}

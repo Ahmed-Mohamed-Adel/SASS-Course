@@ -1,0 +1,21 @@
+.parent + .sibling {
+  // (+) => The Next Element
+  margin: auto;
+  margin-top: 10px;
+}
+
+.parent + .sibling ~ .last {
+  // The Next Element But Not Directly
+  padding: 10px;
+}
+
+.parent {
+  & + .sibling {
+    margin: auto {
+      top: 10px;
+    }
+    & ~ .last {
+      padding: 10px;
+    }
+  }
+}

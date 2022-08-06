@@ -1,0 +1,27 @@
+// First Method With Nesting
+.class > {
+  .child {
+    padding: 10px;
+  }
+}
+
+// Second Method With Interpolation
+$main: "class";
+$child: "child";
+
+.#{$main} {
+  > .#{$child} {
+    padding: 10px;
+  }
+}
+
+// Third Methods With placeholder
+%main > {
+  .child {
+    padding: 10px;
+  }
+}
+
+.class {
+  @extend %main;
+}

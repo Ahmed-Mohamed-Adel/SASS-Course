@@ -1,0 +1,15 @@
+$num: 2;
+$start: 100;
+$index: 1;
+
+@function double($size) {
+  @return $size * $num;
+}
+
+@for $start from 1 through 5 {
+  .box-#{$index * 100} {
+    width: $index * 100px;
+    height: double($index * 100px);
+  }
+  $index: $index * $num;
+}
